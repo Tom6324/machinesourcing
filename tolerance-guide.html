@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CNC Tolerance Guide: ISO 2768, Fit Classes and When ±0.01 mm Is Waste</title>
+<meta name="description" content="How to specify CNC machining tolerances that match function: ISO 2768 general tolerances, H7/h6 fits, geometric tolerance (GD&T) that pays for itself, and the features where precision actually matters.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购工程师在 Google 上真正会搜的问题。
+  内容和数据都可以直接用到你网站上，不用署名，不收钱。看右下角「What this is」了解我能做什么。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="tolerance-guide.html">Tolerances</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="lnk sp" href="index.html#quote">Get a quote</a>
+  <a class="cta" href="index.html#quote">Request pricing</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Tolerances</div>
+  <h1>Specify tolerance by function,<br>not by habit.</h1>
+  <p class="lede">A dimension without a reason behind it is a cost you agreed to without knowing it.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>Start from the general tolerance block</h2>
+  <p>ISO 2768 exists so you do not have to dimension every edge. Declare a class in the title block, then call out only the features that break out of it.</p>
+  <table>
+    <thead><tr><th>ISO 2768 class</th><th>Linear 0.5–3 mm</th><th>6–30 mm</th><th>120–400 mm</th><th>Use for</th></tr></thead>
+    <tbody>
+      <tr><td>f (fine)</td><td class="n">±0.05</td><td class="n">±0.1</td><td class="n">±0.2</td><td>Precision assemblies, mating parts</td></tr>
+      <tr><td>m (medium)</td><td class="n">±0.1</td><td class="n">±0.2</td><td class="n">±0.5</td><td>General machined parts</td></tr>
+      <tr><td>c (coarse)</td><td class="n">±0.2</td><td class="n">±0.5</td><td class="n">±1.2</td><td>Weldments, non-critical brackets</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Values are the standard's tabulated linear tolerances for the size bands shown. Angular and geometric general tolerances follow the same class.</p>
+
+  <h2>Where precision earns its price</h2>
+  <h3>Bearing seats and shafts</h3>
+  <p>A 6205 bearing has a 25 mm bore. Press fit into a housing usually calls for an H7 bore; a rotating shaft for h6 or j6 depending on load. Move 0.02 mm off those and you get either a bearing that spins in its seat or one you cannot install without heat.</p>
+  <h3>Sealing grooves</h3>
+  <p>Groove depth controls compression; side walls control extrusion. Depth is the one that leaks when it is wrong — a 0.05 mm deep groove reduces compression by roughly 1.5 percentage points on a 3.5 mm section.</p>
+  <h3>Datum-referenced hole patterns</h3>
+  <p>Position tolerance of ⌀0.1 at MMC buys you a functional gauge and interchangeable parts. Applying it to a cover plate nobody measures is money spent on paperwork.</p>
+
+  <h2>When GD&T pays for itself</h2>
+  <p>Geometric tolerancing is not decoration. It pays when a part is:</p>
+  <ul>
+    <li>located by two or more features at once (position, profile)</li>
+    <li>rotating (coaxiality, runout)</li>
+    <li>sealing against a flat face (flatness, perpendicularity)</li>
+  </ul>
+  <p>It does not pay on a single-sided bracket held by two bolts. There, a ±0.2 general tolerance and a note to deburr is both cheaper and clearer.</p>
+
+  <div class="warn"><strong>Common specification error:</strong> stacking a tight linear tolerance on a feature that also carries a geometric control. You pay twice for the same requirement. Pick the one that describes the function.</div>
+
+  <h2>Surface finish, translated</h2>
+  <table>
+    <thead><tr><th>Callout</th><th>What the shop does</th><th>Adds cost?</th></tr></thead>
+    <tbody>
+      <tr><td>Ra 6.3</td><td>Roughing pass only</td><td>No</td></tr>
+      <tr><td>Ra 3.2</td><td>Standard finishing pass</td><td>No</td></tr>
+      <tr><td>Ra 1.6</td><td>Light finishing, slower feed</td><td>Slightly</td></tr>
+      <tr><td>Ra 0.8</td><td>Fine finishing or grinding</td><td>Yes</td></tr>
+      <tr><td>Ra 0.4</td><td>Grinding / lapping</td><td>Significantly</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Rule of thumb: sealing and sliding faces need Ra 1.6 or better. Static locating faces at Ra 3.2 are fine. Cosmetic outer faces at Ra 3.2 plus a bead blast look better than Ra 0.8 and cost less.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="cost-guide.html">Next: what drives the price →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Tolerance values reference ISO 2768 and ISO 286 fit classes. Interpretations vary by application; verify against your own assembly requirements.</div>
+</div></footer>
+</body>
+</html>
