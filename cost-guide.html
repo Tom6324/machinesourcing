@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Drives CNC Machining Cost: A Worked Breakdown of a $42 Aluminium Bracket</title>
+<meta name="description" content="A line-by-line cost breakdown of a real machined aluminium bracket — material, setup, cycle time, finish, inspection — and which variables move the price most when you negotiate or redesign.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购工程师在 Google 上真正会搜的问题。
+  内容和数据都可以直接用到你网站上，不用署名，不收钱。看右下角「What this is」了解我能做什么。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="tolerance-guide.html">Tolerances</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="lnk sp" href="index.html#quote">Get a quote</a>
+  <a class="cta" href="index.html#quote">Request pricing</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Cost</div>
+  <h1>Where the money goes<br>on a machined part.</h1>
+  <p class="lede">A worked breakdown, so the next quote you receive is something you can argue with number by number instead of as a single lump.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>The example part</h2>
+  <p>Aluminium 6061-T6 mounting bracket, 120 × 80 × 25 mm, one pocket to 15 mm depth, six M6 tapped holes, 4 mm wall on two sides, clear anodised. Quantity 50.</p>
+
+  <table>
+    <thead><tr><th>Cost line</th><th class="n">Per part</th><th class="n">Share</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Material (bar stock + cut loss)</td><td class="n">$8.10</td><td class="n">19%</td><td>Includes ~12% scrap between parts</td></tr>
+      <tr><td>Programming (amortised)</td><td class="n">$1.60</td><td class="n">4%</td><td>One-off, spread over 50 pieces</td></tr>
+      <tr><td>Setup / fixturing</td><td class="n">$5.00</td><td class="n">12%</td><td>Two ops, soft jaws</td></tr>
+      <tr><td>Machining time</td><td class="n">$16.80</td><td class="n">40%</td><td>28 min at $36/h shop rate</td></tr>
+      <tr><td>Deburr &amp; edge break</td><td class="n">$2.40</td><td class="n">6%</td><td>Manual, 4 min</td></tr>
+      <tr><td>Anodise (outsourced)</td><td class="n">$5.50</td><td class="n">13%</td><td>Batch price, clear Type II</td></tr>
+      <tr><td>Inspection</td><td class="n">$1.40</td><td class="n">3%</td><td>First-article + sampling</td></tr>
+      <tr><td>Packaging</td><td class="n">$1.20</td><td class="n">3%</td><td>Individually wrapped</td></tr>
+      <tr><td><strong>Total</strong></td><td class="n"><strong>$42.00</strong></td><td class="n">= total</td><td>Before freight and duty</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Illustrative figures at a shop rate of about $36/hour. Your number will differ — the proportions are what travel.</p>
+
+  <h2>Which lever to pull</h2>
+  <h3>Machining time — 40%</h3>
+  <p>This is the only line a redesign can move meaningfully. Three changes on this part would take it from 28 minutes to about 19:</p>
+  <ul>
+    <li>Pocket depth from 15 mm to 12 mm — lets a larger cutter run, fewer passes.</li>
+    <li>Internal corner radius from R2 to R4 — bigger tool, higher feed.</li>
+    <li>Wall from 4 mm to 5 mm — less chatter, so the finish pass can run faster.</li>
+  </ul>
+  <p>That is roughly $5.40 off the part before any negotiation.</p>
+
+  <h3>Setup — 12%</h3>
+  <p>Two operations mean two fixtures and two chances to lose alignment. If the part can be machined from one side with a dovetail fixture, setup drops and position error drops with it.</p>
+
+  <h3>Material — 19%</h3>
+  <p>Bar stock is not the place to save. The gains are in bringing the blank closer to net shape: a 25 mm plate cut down from 30 mm wastes 5 mm on every part, and that 5 mm is both material and machining time.</p>
+
+  <h3>Finish — 13%</h3>
+  <p>Anodising is a vendor trip. If the part is internal and non-visible, skipping it removes 13% and one queue. If it is visible, bead blast plus clear anodise is usually cheaper than a tighter machined finish that looks worse.</p>
+
+  <div class="warn"><strong>Quantity is not linear.</strong> Going 10 → 50 typically removes 30–40% from unit price because programming and setup amortise. Going 50 → 500 usually removes another 10–15%. Going 500 → 5,000 rarely changes anything unless the part moves to a different process entirely, in which case a casting or extrusion may beat machining outright.</div>
+
+  <h2>When machining is the wrong process</h2>
+  <p>Above roughly 2,000 pieces a year, the honest answer is often not "cheaper machining" but "stop machining". Extruded profile plus cut-and-drill, die casting, or investment casting each have break-even points that sit well below what most buyers assume. If a supplier never raises this, they are selling capacity, not solving your problem.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="index.html#quote">Send a drawing and test the numbers →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Cost figures are illustrative and based on a representative shop rate. Actual quotations depend on geometry, material availability, quantity and finish routing.</div>
+</div></footer>
+</body>
+</html>
