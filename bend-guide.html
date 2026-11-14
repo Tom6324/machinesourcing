@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minimum Bend Radius, K-Factor and Bend Allowance for Sheet Metal Parts</title>
+<meta name="description" content="How to specify sheet metal bend radius without cracking the part: minimum bend radius by material, K-factor range, bend allowance formula, springback, and the bend notes worth putting on a drawing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购工程师在 Google 上真正会搜的问题。
+  内容和数据都可以直接用到你网站上，不用署名，不收钱。看右下角「What this is」了解我能做什么。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="tolerance-guide.html">Tolerances</a>
+  <a class="lnk" href="bend-guide.html">Bending</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="lnk sp" href="index.html#quote">Get a quote</a>
+  <a class="cta" href="index.html#quote">Request pricing</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sheet metal</div>
+  <h1>Bend radius is a material decision,<br>not a drawing habit.</h1>
+  <p class="lede">The same 2 mm radius is free in mild steel, marginal in 304 and a crack in 6061-T6. Here is how to pick it before the tooling is made.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>What the radius actually has to survive</h2>
+  <p>A bend puts the outside fibre in tension. If that tension exceeds what the material can take before necking, you get orange-peel on the outside, then a crack along the bend line. The rule everyone quotes — "radius equals thickness" — is only true for soft, ductile steel. Everything else moves.</p>
+  <p>The practical number is the ratio <strong>R/T</strong>: inside bend radius divided by sheet thickness. Suppliers quote capability in R/T because it is scale-free — a 0.8 mm sheet with a 0.8 mm radius is the same tooling problem as a 3 mm sheet with a 3 mm radius.</p>
+
+  <table>
+    <thead><tr><th>Material (typical condition)</th><th>Minimum R/T, 90° bend</th><th>What happens below it</th></tr></thead>
+    <tbody>
+      <tr><td>Mild steel DC01 / Q235, annealed</td><td class="n">0.5–1.0</td><td>Usually fine down to 0.5T; below that the punch marks the inside face</td></tr>
+      <tr><td>Galvanized DX51D</td><td class="n">1.0</td><td>Zinc coating stretches and can flake at the outside of a tight bend</td></tr>
+      <tr><td>Stainless 304, annealed</td><td class="n">1.0–1.5</td><td>Work-hardens as it bends; cracking appears on the second or third part, not the first</td></tr>
+      <tr><td>Stainless 316L, annealed</td><td class="n">1.0–1.5</td><td>Similar to 304, slightly less forgiving at high thickness</td></tr>
+      <tr><td>Aluminium 5052-H32</td><td class="n">1.5–2.0</td><td>Surface crazing, then full crack across the bend</td></tr>
+      <tr><td>Aluminium 6061-T6</td><td class="n">2.0–3.0</td><td>Cracks almost immediately at 1T; bend line should run across the grain</td></tr>
+      <tr><td>Cold-rolled steel, full hard</td><td class="n">2.0+</td><td>Needs stress relief or a different temper for anything tighter</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">These are typical ranges used in air bending on a press brake, not absolute limits. Coil grain direction, edge condition from laser cutting, and the punch width all move the number by roughly ±0.5T. Confirm the actual limit with your supplier on the first article.</p>
+
+  <h2>Why the flat pattern never matches your model</h2>
+  <p>Bending stretches material, so the flat blank has to be shorter than the sum of the two legs. The correction is bend allowance, and it depends on one number that is not on your drawing: the K-factor, which describes where the neutral axis sits inside the thickness.</p>
+  <p><strong>BA = π/180 × A × (R + K·T)</strong> — where A is the bend angle in degrees, R the inside radius, T the thickness, and K the neutral-axis position as a fraction of thickness.</p>
+
+  <table>
+    <thead><tr><th>R/T</th><th>K-factor (typical air bend)</th><th>Practical effect on a 2 mm sheet</th></tr></thead>
+    <tbody>
+      <tr><td>0.5</td><td class="n">0.33–0.38</td><td>Neutral axis pulls toward the inside; blank is shortest</td></tr>
+      <tr><td>1.0</td><td class="n">0.40–0.44</td><td>The value most CAD libraries default to</td></tr>
+      <tr><td>2.0</td><td class="n">0.44–0.47</td><td>Approaching pure bending</td></tr>
+      <tr><td>3.0+</td><td class="n">0.48–0.50</td><td>Neutral axis essentially mid-thickness</td></tr>
+    </tbody>
+  </table>
+  <p>Use 0.44 as a starting assumption for a 1T air bend and let the supplier's own table override it. A 0.05 error in K on a 2 mm sheet changes the flat length by about 0.1 mm per bend — irrelevant on a bracket, a rejected first article on a part with eight bends in a tolerance chain.</p>
+
+  <div class="warn"><strong>The expensive mistake:</strong> modelling the part at the finished radius and sending the CAD as-is, without the flat pattern, then rejecting the first article because the hole pattern is 0.6 mm out. On a part with five or more bends, agree the K-factor in writing before tooling. It costs one email.</div>
+
+  <h2>Springback: the reason your 90° is 92°</h2>
+  <p>Every material springs back when the punch releases. For mild steel at R/T around 1, expect roughly 1–2° of springback; stainless and high-strength aluminium run 2–4°; 6061-T6 can exceed 5°. The shop compensates by over-bending, which is why the punch angle on the press brake is not 90°.</p>
+  <p>This matters to you as a buyer because it explains a tolerance argument you will otherwise lose. A drawing that says 90° ±0.5° on a 3 mm 304 part is asking for a coining operation, not air bending — the price difference is not small.</p>
+
+  <h2>What to put on the drawing</h2>
+  <ul>
+    <li><strong>Inside radius, not outside.</strong> The punch defines the inside. An outside radius forces the shop to subtract thickness and guess.</li>
+    <li><strong>One bend note covering the whole part</strong>, with exceptions called out individually. Repeating "R2" at eleven bends is how contradictions get into a drawing.</li>
+    <li><strong>Grain direction</strong> on any part in 6061 or full-hard steel — a note that the bend line must run across the rolling direction is often the difference between a part and a scrap bin.</li>
+    <li><strong>Bend relief</strong> where a bend terminates next to a cut edge. Without it you get a tear that starts at the corner and travels.</li>
+    <li><strong>Critical dimensions referenced to a datum after bending</strong>, not before. Hole-to-bend distances move with springback; hole-to-hole does not.</li>
+  </ul>
+
+  <h2>The cost side, briefly</h2>
+  <p>A tight radius is not expensive by itself. What costs money is the second operation it forces: annealing before bending on 6061-T6, a smaller V-die with more strokes, a shimmed setup to hold ±0.3° on a part that did not need it. Loosening a bend angle tolerance from ±0.5° to ±1° on a non-critical bracket is usually free money.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="tolerance-guide.html">Next: how tolerance classes actually work →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Bend radii and K-factors given here are typical ranges for air bending, not certified limits. Values vary with tooling, grain direction and material certificate. Verify against your own first article and your supplier's tooling table.</div>
+</div></footer>
+</body>
+</html>
