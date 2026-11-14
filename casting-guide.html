@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investment Casting Tolerances and Cost: What to Specify, What to Stop Paying For</title>
+<meta name="description" content="A sourcing guide to investment casting: which linear tolerances a lost-wax foundry can actually hold, where machining allowance is cheaper than tighter casting, why draft angles are not needed, and the five line items that quietly double a casting quote.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购工程师在 Google 上真正会搜的问题。
+  内容和数据都可以直接用到你网站上，不用署名，不收钱。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Investment casting</a>
+  <a class="lnk" href="cnc-guide.html">CNC machining</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="cta" href="index.html#offer">Free sample pages</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Sourcing guide · Investment casting</div>
+  <h1>The tolerance callout that<br><span class="u">adds 40% to a casting quote.</span></h1>
+  <p class="lede">A lost-wax foundry can hold a linear tolerance of about &plusmn;0.10&nbsp;mm on a small steel feature, and most will quote it without argument. Ask for &plusmn;0.05&nbsp;mm on the same feature and the price does not move 5% &mdash; it moves because the part now needs a straightening operation, a fixture, and a dimensional report on every piece. Here is how to tell which callouts are worth it.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>1. What an investment casting actually holds</h2>
+  <p class="muted">Not a standard number &mdash; a capability band that depends on size, alloy and section.</p>
+
+  <p>ISO&nbsp;8062-3 groups castings into dimensional tolerance grades (DCTG). Commercial investment casting sits roughly in DCTG&nbsp;4&ndash;6, tighter than sand casting (DCTG&nbsp;7&ndash;9) because the wax pattern is injected into a machined steel die rather than formed in a packed sand mould. In shop-floor terms, the numbers most foundries will quote against look like this:</p>
+
+  <table>
+    <thead><tr><th>Dimension (mm)</th><th class="n">Routine tolerance</th><th class="n">Achievable, costed</th><th class="n">Needs a second operation</th></tr></thead>
+    <tbody>
+      <tr><td>up to 25</td><td class="n">&plusmn;0.10</td><td class="n">&plusmn;0.05</td><td class="n">&plusmn;0.02</td></tr>
+      <tr><td>25 – 100</td><td class="n">&plusmn;0.15</td><td class="n">&plusmn;0.10</td><td class="n">&plusmn;0.05</td></tr>
+      <tr><td>100 – 250</td><td class="n">&plusmn;0.25</td><td class="n">&plusmn;0.15</td><td class="n">&plusmn;0.10</td></tr>
+      <tr><td>250 – 500</td><td class="n">&plusmn;0.40</td><td class="n">&plusmn;0.25</td><td class="n">&plusmn;0.15</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Typical commercial ranges for silica-sol investment casting in carbon and stainless steel. Treat them as a starting point for a conversation, not a guarantee &mdash; ask your foundry for their measured Cpk on a comparable part, not their brochure.</p>
+
+  <div class="warn"><strong>The rule that saves the most money:</strong> if a feature needs to be tighter than &plusmn;0.10&nbsp;mm, cast it with 1&ndash;1.5&nbsp;mm of stock and machine it. A machined face on a casting is almost always cheaper than a casting held to a machining tolerance, because the foundry stops fighting shrinkage and starts cutting metal.</div>
+
+  <h2>2. Three callouts that cost money for no reason</h2>
+
+  <h3>Draft angle on every face</h3>
+  <p>Investment casting does not need draft the way sand casting or die casting does. The pattern is wax, it is melted out of a ceramic shell, and the shell does not care about a vertical wall. Foundries still receive drawings with 1&ndash;2&deg; of draft added "for casting", which forces a redesign of parts that could have had straight sides. Undercuts and internal cavities that would be impossible in a two-part die are routine here, because the wax pattern comes from a split aluminium die and the shell is disposable.</p>
+
+  <h3>Machining allowance quoted as a single number</h3>
+  <p>"0.5&nbsp;mm cleanup all over" on a 3&nbsp;kg part is not enough to remove casting skin and distortion, and the shop will either add a straightening step or scrap the first pieces. Realistic allowance is 1.0&ndash;1.5&nbsp;mm on faces that will be machined, 2&nbsp;mm on large flat faces and on bores that will be bored rather than drilled. Allowance is nearly free in the casting and expensive in the machine shop, so put it where the cut is short.</p>
+
+  <h3>Radiography on everything</h3>
+  <p>X-ray is a real cost line &mdash; often 8&ndash;15% of the piece price on small parts, plus a day of lead time. Specify it for pressure-retaining sections, fatigue-critical parts, and anywhere a void would create a leak path. Do not specify it because the part is "important". A dimensional and visual inspection with a written report covers most structural castings.</p>
+
+  <h2>3. Where the money actually goes</h2>
+  <p>The wax die is the fixed cost. Everything else is per piece.</p>
+
+  <table>
+    <thead><tr><th>Cost line</th><th>Nature</th><th class="n">Share of a 500 pc order</th></tr></thead>
+    <tbody>
+      <tr><td>Wax injection die (aluminium)</td><td>One-time tooling</td><td class="n">15 – 30%</td></tr>
+      <tr><td>Wax, shell, melt, pour</td><td>Per piece</td><td class="n">30 – 40%</td></tr>
+      <tr><td>Cut-off, grind, shot blast</td><td>Per piece</td><td class="n">8 – 12%</td></tr>
+      <tr><td>Heat treatment</td><td>Per lot, mostly</td><td class="n">5 – 10%</td></tr>
+      <tr><td>Machining</td><td>Per piece, optional</td><td class="n">0 – 25%</td></tr>
+      <tr><td>Inspection and NDT</td><td>Per piece or per lot</td><td class="n">3 – 15%</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Illustrative split for a 0.3&ndash;1&nbsp;kg stainless part at 500 pieces. At 50 pieces tooling dominates; at 5,000 pieces it nearly disappears and material yield becomes the lever.</p>
+
+  <p>Two consequences follow. First, the cheapest way to lower a casting price is usually to increase the order quantity, not to negotiate the per-kilo rate &mdash; the die spread is the biggest single line on a first order. Second, at low volumes it is worth asking whether the part should be cast at all: below roughly 200 pieces, a machined-from-solid or fabricated part can beat a cast one once tooling is included.</p>
+
+  <h2>4. Minimum wall and the sections that fail</h2>
+  <p>For steel, 2&nbsp;mm is a comfortable minimum wall; 1.5&nbsp;mm is possible on small parts with good gating; below 1.2&nbsp;mm you are asking the foundry to run hotter metal and accept more scrap. The failures that show up in service are rarely thin walls on their own &mdash; they are abrupt section changes. A 6&nbsp;mm boss standing on a 2.5&nbsp;mm wall creates a hot spot, a shrinkage void, and a crack initiation site in that order. Fillets at 0.5&times; wall thickness and a 3:1 taper between sections remove most of this before a pattern is ever cut.</p>
+
+  <h2>5. The five questions to ask before you send the RFQ</h2>
+  <ol>
+    <li><strong>Which dimensions govern fit?</strong> Two to four, usually. Mark those; leave the rest at general tolerance.</li>
+    <li><strong>Is any surface a sealing or bearing surface?</strong> If yes, plan to machine it and add allowance now.</li>
+    <li><strong>What is the annual volume, honestly?</strong> It decides whether tooling amortises or dominates.</li>
+    <li><strong>Does the part need NDT, or does the drawing just say so?</strong> Ask what failure the test is meant to catch.</li>
+    <li><strong>Which material certificate is actually required?</strong> A 3.1 certificate on every lot is a line item; on non-pressure parts an EN&nbsp;10204 type 2.2 is usually enough.</li>
+  </ol>
+
+  <p class="muted" style="margin-top:34px;font-size:14px;border-top:1px solid var(--line);padding-top:16px">
+    Tolerances reference ISO&nbsp;8062-3 dimensional tolerance grades; cost splits are illustrative industry ranges and vary with geometry, alloy and quantity. Confirm capability with your supplier's measured data before releasing a drawing.
+  </p>
+</main>
+
+<footer style="border-top:1px solid var(--line);margin-top:60px;padding:26px 0;text-align:center;color:var(--ink3);font-size:13.5px">
+  Sample page written as a demonstration of format and depth.
+  <a href="index.html" style="color:var(--accent)">What this is &rarr;</a>
+</footer>
+</body>
+</html>
