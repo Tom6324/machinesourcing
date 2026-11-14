@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CNC Machining Tolerances, Materials and Cost — A Buyer's Guide (2026)</title>
+<meta name="description" content="Practical guide for engineers sourcing CNC machined parts: which tolerances actually matter, how material choice changes price, what drives cost per part, and the DFM checks that remove 20-40% of quotes before you send them.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购工程师在 Google 上真正会搜的问题。
+  内容和数据都可以直接用到你网站上，不用署名，不收钱。看右下角「What this is」了解我能做什么。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="tolerance-guide.html">Tolerances</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="lnk sp" href="#quote">Get a quote</a>
+  <a class="cta" href="#quote">Request pricing</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Sourcing guide · Updated Nov 2026</div>
+  <h1>Stop paying for tolerances<br><span class="u">your part does not need.</span></h1>
+  <p class="lede">Most CNC quotes come back expensive for one reason: the drawing asks for ±0.01&nbsp;mm everywhere, on every feature, because nobody went back and decided which dimensions actually govern fit. This guide is the checklist we use before a drawing goes out to a shop.</p>
+  <a class="cta" href="#quote">Send a drawing, get a price in 48h</a>
+</div></section>
+
+<main class="wrap">
+
+  <h2>1. What a tolerance actually costs</h2>
+  <p class="muted">Tolerance is not a quality dial. It is a manufacturing process selector.</p>
+  <p>Loosening a feature from ±0.05&nbsp;mm to ±0.1&nbsp;mm usually changes nothing — both run on the same 3-axis mill with the same setup. Tightening from ±0.05&nbsp;mm to ±0.01&nbsp;mm changes everything: slower feeds, temperature-controlled room, more in-process gauging, possibly a grinder in the routing, and a higher scrap allowance baked into the price.</p>
+
+  <table>
+    <thead><tr><th>Tolerance band</th><th>Typical process</th><th class="n">Relative cost index</th><th class="n">Realistic lead time</th></tr></thead>
+    <tbody>
+      <tr><td>±0.20 mm</td><td>3-axis milling, as-machined</td><td class="n">1.0×</td><td class="n">5–7 days</td></tr>
+      <tr><td>±0.10 mm</td><td>3-axis, light finishing pass</td><td class="n">1.0–1.1×</td><td class="n">5–8 days</td></tr>
+      <tr><td>±0.05 mm</td><td>Standard precision milling / turning</td><td class="n">1.2–1.4×</td><td class="n">7–10 days</td></tr>
+      <tr><td>±0.02 mm</td><td>Precision machining, CMM inspection</td><td class="n">1.8–2.4×</td><td class="n">10–15 days</td></tr>
+      <tr><td>±0.01 mm</td><td>Grinding / jig boring, climate control</td><td class="n">2.5–4.0×</td><td class="n">14–21 days</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Indices are relative to an as-machined baseline on the same part. They move with geometry, material and quantity — a ±0.01 mm bore in aluminium is not the same commercial problem as one in 17-4PH.</p>
+
+  <div class="warn"><strong>The 80/20 of drawings:</strong> in most assemblies, two to four dimensions control fit and function. Everything else is clearance, cover, or cosmetic. Mark the critical ones, leave the rest at general tolerance, and the quote usually drops 15–30%.</div>
+
+  <h2>2. Which tolerances to keep tight</h2>
+  <p class="muted">Decide by function, not by habit.</p>
+  <h3>Keep tight — these change how the assembly behaves</h3>
+  <ul>
+    <li><strong>Bearing and bushing bores.</strong> Fit classes (H7/h6, H7/g6) exist for a reason; a bore 0.03 mm over nominal turns a press fit into a slip fit.</li>
+    <li><strong>Sealing surfaces and O-ring grooves.</strong> Groove depth and side-wall finish govern compression. Get the depth wrong and no amount of torque saves it.</li>
+    <li><strong>Datum-referenced hole positions</strong> in parts that mate with more than one component.</li>
+    <li><strong>Any pair of features that set a centre distance</strong> for gears, pulleys or belt tension.</li>
+  </ul>
+  <h3>Leave loose — these rarely matter</h3>
+  <ul>
+    <li>Overall length of a bracket that is located by two bolts.</li>
+    <li>Fillet and chamfer sizes on non-sealing edges.</li>
+    <li>Pocket depth with 1 mm of clearance under the part it houses.</li>
+    <li>Cosmetic faces that nobody inspects with a straightedge.</li>
+  </ul>
+
+  <h2>3. Material: where the money actually goes</h2>
+  <p class="muted">Material is usually 20–45% of a machined part's price. Machinability moves the other half.</p>
+
+  <table>
+    <thead><tr><th>Material</th><th>Typical use</th><th>Machinability</th><th class="n">Relative cost</th></tr></thead>
+    <tbody>
+      <tr><td>6061-T6 aluminium</td><td>Brackets, housings, fixtures</td><td>Excellent</td><td class="n">Low</td></tr>
+      <tr><td>7075-T6 aluminium</td><td>High-strength, aerospace-adjacent</td><td>Good</td><td class="n">Medium</td></tr>
+      <tr><td>304 / 316L stainless</td><td>Food, medical, marine</td><td>Poor — work-hardens</td><td class="n">Medium–High</td></tr>
+      <tr><td>4140 / 4340 alloy steel</td><td>Shafts, load-bearing parts</td><td>Moderate (pre-hard)</td><td class="n">Medium</td></tr>
+      <tr><td>POM (Delrin)</td><td>Wear parts, insulators</td><td>Excellent</td><td class="n">Low</td></tr>
+      <tr><td>PEEK</td><td>High-temp, chemical, medical</td><td>Moderate</td><td class="n">High</td></tr>
+      <tr><td>17-4PH stainless</td><td>Valve bodies, high-strength corrosion</td><td>Poor</td><td class="n">High</td></tr>
+    </tbody>
+  </table>
+  <p>Two substitutions that quietly cut cost without touching function: 316L → 304 where the environment is not actually chloride-bearing, and 7075 → 6061 where the strength margin is already 3×.</p>
+
+  <h2>4. The five cost drivers, in order of impact</h2>
+  <div class="grid3">
+    <div class="box"><div class="k">01</div><div class="v">Setup count</div><p>Every extra operation — 4th axis, second op, heat treat, plating — adds a setup. Reduce fixturing and the price falls faster than any negotiation.</p></div>
+    <div class="box"><div class="k">02</div><div class="v">Tolerance</div><p>See section 1. A single ±0.01 mm feature can add a grinding operation to the whole routing.</p></div>
+    <div class="box"><div class="k">03</div><div class="v">Material</div><p>20–45% of part price, plus scrap. Buying the bar stock yourself rarely saves money once cut loss is counted.</p></div>
+    <div class="box"><div class="k">04</div><div class="v">Quantity</div><p>Tooling and programming amortise. Going from 10 to 100 pieces often halves unit price; 100 to 1,000 rarely does.</p></div>
+    <div class="box"><div class="k">05</div><div class="v">Finish</div><p>Anodise, bead blast, electropolish, passivation — each is a separate vendor and a separate queue.</p></div>
+  </div>
+
+  <h2>5. DFM checks that remove quotes before you send them</h2>
+  <ul>
+    <li><strong>Pocket depth vs tool diameter.</strong> Anything deeper than 4× the tool diameter needs a smaller tool, a longer reach, and slower feeds. Cap pockets at 4× where you can.</li>
+    <li><strong>Internal corners.</strong> A cutter leaves a radius equal to its own. Ask for R0.5 and you get a 1 mm cutter, which is fragile and slow. If the corner does not need to be sharp, say R3.</li>
+    <li><strong>Wall thickness.</strong> Under 1 mm in aluminium or 1.5 mm in stainless, chatter and deflection start showing in the finish.</li>
+    <li><strong>Threads to the bottom of a blind hole.</strong> Specify usable thread depth, not full depth. Otherwise you pay for a tap that bottoms out and breaks.</li>
+    <li><strong>Surface finish callouts.</strong> Ra 3.2 is as-machined. Ra 1.6 needs a finishing pass. Ra 0.8 usually means grinding. Ask whether the surface is a seal, a slide, or a cover.</li>
+  </ul>
+
+  <div class="card">
+    <h3>What to put on the drawing instead of blanket tolerances</h3>
+    <p class="muted" style="margin-bottom:12px">A title block with a sensible general tolerance, plus explicit callouts only where they matter:</p>
+    <table style="margin:0">
+      <thead><tr><th>Field</th><th>Recommended default</th></tr></thead>
+      <tbody>
+        <tr><td>General tolerance</td><td>ISO 2768-m (or -f for precision assemblies)</td></tr>
+        <tr><td>Critical features</td><td>Dimension with explicit ± and a datum reference frame</td></tr>
+        <tr><td>Surface finish</td><td>Ra 3.2 general; call Ra 1.6 only on sealing or sliding faces</td></tr>
+        <tr><td>Edge break</td><td>0.2–0.5 mm, deburr all edges</td></tr>
+        <tr><td>Material cert</td><td>Request mill cert only if the part is safety- or compliance-relevant</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="quote">Send a drawing, get a real number</h2>
+  <p>We quote machined parts from 2D drawings (PDF/DWG) and 3D models (STEP/IGES/X_T). Prices come back in 48 hours with the routing broken out — material, setup, machining time, finish — so you can see which line item to attack if the number is high.</p>
+  <p class="muted">No obligation, and we will tell you if the drawing is over-specified rather than quietly pricing the worst case.</p>
+  <a class="cta" href="mailto:quote@example.com?subject=RFQ%20-%20CNC%20machined%20part">Email your drawing</a>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site. Content is written as a working example of buyer-intent technical content.
+  <div class="fine">Tolerance and cost figures are engineering approximations for illustration, not quotations. Every part must be quoted against its own drawing.</div>
+</div></footer>
+</body>
+</html>
