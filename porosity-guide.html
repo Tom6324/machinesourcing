@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Die Casting Porosity: Causes, Acceptance Criteria and How to Specify It</title>
+<meta name="description" content="Why porosity appears in aluminum and zinc die castings, how to write an acceptance criterion that a foundry can actually inspect to, what ASTM E505 severity levels and pressure testing mean in a purchase order, and what over-specifying costs.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/porosity-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Die Casting Porosity: Causes, Acceptance Criteria and How to Specify It">
+<meta property="og:description" content="Why porosity appears in die castings, how to write an acceptance criterion a foundry can inspect to, what ASTM E505 severity levels and pressure testing mean in a PO, and what over-specifying costs.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/porosity-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购和品质工程师搜「die casting porosity」时真正想找的答案。
+  内容和数据可以直接用到你网站上，不用署名，不收钱。数字都是典型区间，标准条款请以原文为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="tolerance-guide.html">Tolerances</a>
+  <a class="lnk" href="cost-guide.html">Cost drivers</a>
+  <a class="lnk sp" href="index.html#quote">Get a quote</a>
+  <a class="cta" href="index.html#quote">Request pricing</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Die casting</div>
+  <h1>Porosity is a process signature,<br>not a supplier's mistake.</h1>
+  <p class="lede">Every high-pressure die casting contains gas or shrinkage voids somewhere. The only question that matters on a purchase order is which ones you will accept, where, and how the foundry proves it.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>Why the metal cannot fill the die cleanly</h2>
+  <p>In high-pressure die casting the cavity fills in milliseconds. Gate velocities typically run 30–60 m/s, and the air that was in the cavity has to leave through the vents in that same window. Some of it does not. The rest is compressed into the metal and stays there as gas porosity — round, smooth-walled voids, usually 0.2–2 mm, sitting near the surface or at the end of the flow path.</p>
+  <p>The second family is shrinkage. A section that is thicker than its neighbours solidifies last, and the volume it loses on solidification has nothing to draw from. That produces jagged, dendritic cavities, typically at bosses, rib junctions and heavy flanges. The two types behave differently downstream: gas porosity expands and blisters when the part is painted or powder-coated, shrinkage porosity opens up when a sealing face is machined.</p>
+  <p>That distinction is the reason a single line in a drawing — "no porosity allowed" — is unusable. It asks the foundry to reject parts that no die casting process can produce, and the practical result is either a price nobody can hold or a supplier who quietly ignores the note.</p>
+
+  <table>
+    <thead><tr><th>Void type</th><th>Where it forms</th><th>What it does later</th><th>What reduces it</th></tr></thead>
+    <tbody>
+      <tr><td>Gas, from trapped air</td><td>Last-filled areas, deep pockets, far from the gate</td><td>Blisters under paint after curing; leaks on a machined face</td><td>Overflow wells, venting, vacuum assist, lower gate speed</td></tr>
+      <tr><td>Gas, from release agent</td><td>Anywhere spray accumulates; heavy on deep cores</td><td>Same as above, plus cold shuts at the flow front</td><td>Spray volume and dilution control, die temperature balance</td></tr>
+      <tr><td>Shrinkage</td><td>Thick bosses, rib-to-wall junctions, heavy flanges</td><td>Opens when machined; sink marks on the cosmetic face</td><td>Wall thickness uniformity, local cooling, squeeze pins</td></tr>
+      <tr><td>Cold shut / misrun</td><td>Thin sections far from the gate, low die temperature</td><td>Visible line, weakness across the section</td><td>Fill and solidification simulation, thermal control</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Typical wall thickness for aluminium HPDC sits around 2.0–4.0 mm. Below roughly 1.5 mm the flow length to thickness ratio becomes the limiting factor; above about 6 mm shrinkage porosity becomes hard to avoid without local cooling or squeeze pins. Both numbers are process rules of thumb, not standard limits — the die layout decides.</p>
+
+  <h2>Three ways to accept or reject, and what each one really measures</h2>
+  <p><strong>Visual.</strong> Only finds surface-breaking defects. Appropriate for non-critical cosmetic faces, and inexpensive, but it says nothing about the inside of the part. If your drawing says "visual inspection only", do not later reject a batch because a machined face shows a pore — the criterion never covered it.</p>
+  <p><strong>Radiography.</strong> ASTM E505 provides reference radiographs for aluminium and magnesium die castings with severity levels from 1 to 8, level 1 being the least severe. A drawing note should read something like "ASTM E505, gas porosity not exceeding severity level 3 in the sealing zone, level 5 elsewhere". That is inspectable, comparable between foundries, and it prices. The trap is specifying level 2 across a whole part: at that point you are asking for a casting process that is closer to gravity casting in cost, and the quote will reflect it.</p>
+  <p><strong>Pressure or leak test.</strong> The only method that tests the function rather than the appearance. For valve and pump bodies, API 598 is the usual reference: shell test at 1.5 times the rated pressure and seat test at 1.1 times, held for the duration the standard specifies. For non-pressure parts, a decay test at 1–2 bar air with a 30–60 s stabilisation is a common in-house substitute, but it is a customer-specific criterion — it has to be written into the PO, not assumed.</p>
+
+  <table>
+    <thead><tr><th>Zone on the part</th><th>Criterion worth writing</th><th>Inspection method</th></tr></thead>
+    <tbody>
+      <tr><td>Sealing face, O-ring groove, hydraulic passage</td><td>No visible porosity after machining; radiography to E505 level 2–3</td><td>Visual after machining + X-ray on first article and at agreed frequency</td></tr>
+      <tr><td>Structural section, load-bearing boss</td><td>E505 level 3–4, no shrinkage void crossing the section</td><td>Radiography, sample basis</td></tr>
+      <tr><td>Cosmetic A-surface</td><td>No surface pore visible after finishing; blisters rejected after paint cure</td><td>Visual against a boundary sample, agreed in writing</td></tr>
+      <tr><td>Machined non-sealing face</td><td>Isolated pores under an agreed diameter and count per area</td><td>Visual, with a photo standard attached to the drawing</td></tr>
+      <tr><td>As-cast internal, non-functional</td><td>No criterion; accept process capability</td><td>None — this is where you stop paying</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">The severity levels and test multipliers above are the ones commonly written into die casting and valve purchase orders. They are typical practice, not a substitute for the standard text or for your own end-customer's requirement. Confirm the exact clause with your quality department before it goes on a drawing.</p>
+
+  <div class="warn"><strong>Where the money goes:</strong> radiographing every part on a 20,000-piece order can add more to the unit price than the casting itself. First article plus a sampling frequency — for example five parts per shift, or per 2,000 pieces — gives you the same process control at a fraction of the cost. Write the frequency down, not just the level.</div>
+
+  <h2>What to put in the RFQ so the quote is comparable</h2>
+  <ul>
+    <li><strong>Which zones are functional.</strong> One sentence and a marked-up drawing. A foundry that does not know which face seals will quote a uniform porosity level and charge you for it.</li>
+    <li><strong>Post-casting operations.</strong> If the part is machined, powder-coated or anodised, say so. Gas porosity that is harmless as-cast becomes a reject after a 200 °C cure or a caustic etch.</li>
+    <li><strong>Test pressure and medium.</strong> Air, water, or helium changes both the sensitivity and the equipment the supplier needs.</li>
+    <li><strong>Who pays for the X-ray film and the report.</strong> Documents are a line item in some quotes and included in others; the difference shows up when you compare prices.</li>
+    <li><strong>What happens on a failed lot.</strong> Rework, concession or scrap, and who decides. Agreeing this before the first shipment is cheaper than arguing about it during one.</li>
+  </ul>
+
+  <h2>The question behind the question</h2>
+  <p>Buyers search for "acceptable porosity in die casting" because they have received parts with visible pores and do not know whether to reject them. The useful answer is not a single number. It is a zoning decision: pressure-tight where it seals, structural where it carries load, cosmetic where it is seen, and unconstrained everywhere else. Once that is on the drawing, porosity stops being an argument and becomes a measurement.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="casting-guide.html">Next: what investment casting can hold, and what it costs →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Porosity levels, wall thickness ranges and test multipliers quoted here are typical industry practice for high-pressure die casting. Acceptance criteria must be confirmed against the applicable standard text (ASTM E505, API 598, ISO 8062-3) and your own end-customer requirement before being written into a purchase order.</div>
+</div></footer>
+</body>
+</html>
