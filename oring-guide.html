@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NBR vs Silicone vs FKM O-Rings: Choosing by Application, Not by Price</title>
+<meta name="description" content="How to choose between NBR, silicone (VMQ) and FKM O-rings: working temperature ranges, compression set, swelling in oil, ozone ageing, AS568 sizing and ISO 3601 tolerances — and the five application questions that decide the material before the price is discussed.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/oring-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NBR vs Silicone vs FKM O-Rings: Choosing by Application, Not by Price">
+<meta property="og:description" content="Working temperature ranges, compression set, swelling and ageing for NBR, silicone and FKM O-rings, with AS568 sizing and ISO 3601 tolerances.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/oring-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购和维修工程师搜「NBR vs FKM O-ring」「silicone vs nitrile seal」时真正想找的答案。
+  温度范围和溶胀数据按行业通行的典型值标注，正式验收请以 ASTM / ISO 标准原文和材料报告为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="ip-rating-guide.html">Enclosures</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sealing components</div>
+  <h1>An FKM O-ring is not<br>a better NBR O-ring.</h1>
+  <p class="lede">Buyers search for "NBR vs FKM" because three quotations for the same groove can differ by a factor of five, and nobody on the call can say why. The materials are not grades of the same thing. They are different chemistries with different failure modes — and the application, not the unit price, decides which one survives.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>What each material actually is</h2>
+  <p>NBR (nitrile butadiene rubber, usually black) is the workhorse: good resistance to mineral oils and fuels, cheap to compound, and the default for hydraulic and general industrial sealing. Silicone (VMQ) is the temperature-range material: it stays flexible far below freezing and tolerates dry heat and ozone, but it swells in oil. FKM (fluoroelastomer) is the chemistry material: fuels, many aggressive media and hot air, at a cost per part that can be several times NBR. "Better" is the wrong axis — each one fails the other two's applications.</p>
+
+  <table>
+    <thead><tr><th>Property</th><th>NBR</th><th>VMQ (silicone)</th><th>FKM</th></tr></thead>
+    <tbody>
+      <tr><td>Typical working temperature</td><td>−30 °C to 100 °C (short excursions to about 120 °C)</td><td>−60 °C to 200 °C</td><td>−20 °C to 200 °C (special compounds to about −40 °C)</td></tr>
+      <tr><td>Mineral oil / fuel resistance</td><td>Good — the standard choice</td><td>Poor to moderate; swells</td><td>Very good</td></tr>
+      <tr><td>Ozone and weather ageing</td><td>Poor — cracks outdoors unless compounded for it</td><td>Good</td><td>Very good</td></tr>
+      <tr><td>Steam and hot water</td><td>Poor</td><td>Moderate</td><td>Poor for standard grades; peroxide-cured FKM or EPDM is used instead</td></tr>
+      <tr><td>Standard hardness</th><td>Shore A 70 (70 ± 5)</td><td>Shore A 70</td><td>Shore A 75 or 70</td></tr>
+      <tr><td>Relative part price, same size</td><td>Reference 1×</td><td>Typically 2–3×</td><td>Typically 5–8×</td></tr>
+      <tr><td>Typical uses</td><td>Hydraulic cylinders, pumps, engines, general maintenance</td><td>Food-contact equipment, dry heat, outdoor electronics, low-temperature service</td><td>Chemical process, fuel systems, high-temperature engine and compressor seals</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Temperature ranges, hardness and price ratios are typical industry values for standard compounds; special grades extend them in both directions. Confirm the compound datasheet before writing a material into a drawing. Food-contact silicone requires a compliance declaration (FDA or EU 10/2011 as applicable) — the base polymer is not the claim.</p>
+
+  <h2>Temperature is the headline, not the whole story</h2>
+  <p>Two O-rings rated to the same maximum temperature will not last the same time in the same housing. The properties that decide service life are usually these three, and they are what separate a cheap part from a good one at identical size and material:</p>
+  <ul>
+    <li><strong>Compression set.</strong> A seal squeezed in a groove relaxes; the question is by how much after a defined hot ageing period. A nitrile ring that sets 15% and one that sets 8% are both "NBR 70 shore" — and only one is still sealing at the end of the year. State the requirement (a common target for industrial service is ≤ 15–25% after 22 h at the working temperature, per ISO 815) or you will get whatever the factory has on the shelf.</li>
+    <li><strong>Volume change in the medium.</strong> Measured by immersion testing per ASTM D471 or ISO 1817 in a reference oil or the actual fluid. Swelling of +10% is a soft, leaky seal; shrinking −5% opens the interference. A material report with these numbers costs the supplier nothing to request from their compounder — buyers who ask for it get a different factory tier than buyers who do not.</li>
+    <li><strong>Batch traceability.</strong> ISO 3601-5 and material certificates turn a bag of black rings into a line item that a quality department can receive. If the seal goes into anything with a serial number, this is worth agreeing before the first order.</li>
+  </ul>
+
+  <div class="warn"><strong>Where the money goes:</strong> the price step from NBR to FKM is chemistry and cannot be negotiated away. The price difference between two NBR rings of the same size is compounding, curing and inspection — and that difference is exactly the one a written compression-set and swelling requirement will surface. Specifying the material but not the properties is how a good price becomes an expensive warranty claim.</div>
+
+  <h2>Sizing: AS568 is a catalogue, not the whole market</h2>
+  <p>The AS568 dash system (for example AS568-136) covers about 380 standard inch-series sizes, and most maintenance sealing in North America can be done from it. ISO 3601 and the metric 3601 series, JIS B 2401 in Japan, and DIN 3771 in Europe overlap but do not match one-to-one — a 25.07 × 3.53 metric ring is not an AS568-214, and mixing the two in one library causes double-oh and leak callbacks. Cross-reference once, keep one system per BOM, and write the standard into the drawing.</p>
+
+  <h2>The five questions that pick the material</h2>
+  <ol>
+    <li><strong>What fluid, at what temperature, for how long?</strong> Continuous 90 °C mineral oil is NBR territory; 150 °C fuel is FKM; −45 °C outdoor storage moves the conversation to silicone or a low-temperature FKM.</li>
+    <li><strong>Static or dynamic?</strong> A static face seal is forgiving. A reciprocating rod seal needs hardness, extrusion resistance and a surface finish on the rod — the material choice is only one of the three.</li>
+    <li><strong>Intermittent peaks or continuous service?</strong> Materials survive excursions above their rating briefly. A datasheet maximum quoted as a permanent rating is a sign the writer has not read the datasheet.</li>
+    <li><strong>What is around the seal?</strong> Ozone from nearby electric motors cracks unprotected NBR even with no fluid and no heat. Outdoor and electrical-equipment sealing often fails for this reason before any fluid reaches the ring.</li>
+    <li><strong>What does downtime cost?</strong> A 30-cent ring that stops a machine for a shift is not cheaper than a 2-dollar ring that does not. Maintenance buyers know this; procurement tables often hide it.</li>
+  </ol>
+
+  <h2>What to put in the RFQ</h2>
+  <ul>
+    <li><strong>Material, standard and hardness</strong> — "NBR, Shore A 70 ± 5, black, per supplier's standard compound datasheet" is a spec; "rubber O-ring" is not.</li>
+    <li><strong>Size with its standard</strong> — AS568-xxx or ISO 3601 dash number, or the metric inside diameter × cross section with tolerance, not a caliper reading of a used part.</li>
+    <li><strong>The properties that matter for the application</strong> — compression set target, swelling limits in the actual medium, ageing requirement if outdoors.</li>
+    <li><strong>Quantity and tolerance class.</strong> ISO 3601 tolerance classes differ in cost; a static low-pressure application does not need the tightest class on every size.</li>
+    <li><strong>First-article inspection and batch reporting</strong> — especially for the first order from a new supplier.</li>
+  </ul>
+
+  <h2>The question behind the question</h2>
+  <p>Buyers compare NBR, silicone and FKM because the same part number comes back at wildly different prices and nobody wants to be the person who picked wrong. The material choice is settled by five application facts — fluid, temperature, motion, environment, downtime cost — in about two minutes. The price is then honest: it reflects chemistry. What is left to negotiate is compounding and inspection, and those are exactly the things the RFQ makes visible. A supplier who answers "what is your compression set at 100 °C" with a datasheet is telling you something a price list cannot.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="ip-rating-guide.html">Next: what IP65 and IP66 actually test →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Temperature ranges, compression-set values, immersion limits and price ratios on this page are typical industry values for standard compounds, offered for orientation. Material selection must be confirmed against the compound datasheet, ASTM D471 / ISO 3601 documentation and the end application before being written into a purchase order.</div>
+</div></footer>
+</body>
+</html>
