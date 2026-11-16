@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP65 vs IP66: What the Rating Actually Tests and How to Specify It</title>
+<meta name="description" content="What IP65 and IP66 really measure under IEC 60529, the nozzle, flow and duration behind each liquid digit, why NEMA 4 and IP66 are not interchangeable, and the five places an enclosure loses its rating after it leaves the factory.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/ip-rating-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IP65 vs IP66: What the Rating Actually Tests and How to Specify It">
+<meta property="og:description" content="What IP65 and IP66 measure under IEC 60529, the test parameters behind each liquid digit, why NEMA 4 and IP66 are not interchangeable, and where an enclosure loses its rating after delivery.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/ip-rating-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购和电气工程师搜「IP65 vs IP66」「NEMA 4 vs IP66」时真正想找的答案。
+  内容和数据可以直接用到你网站上，不用署名，不收钱。试验参数按 IEC 60529 的常规做法写，标注为典型值，正式验收请以标准原文和第三方报告为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="porosity-guide.html">Die casting</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Electrical enclosures</div>
+  <h1>IP65 is a test result,<br>not a description of your cabinet.</h1>
+  <p class="lede">Buyers search for IP65 and IP66 expecting a material or a design. What the code actually records is a nozzle, a flow rate and a duration that a sample survived once. Everything else — the gasket, the gland, the cutout, the paint — decides whether the delivered unit still behaves that way.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>Two digits, two completely different tests</h2>
+  <p>IEC 60529 writes the code as IP followed by two characters. The first is about solid objects and dust, the second about water. They are tested separately and they fail separately, which is why a cabinet can be genuinely dust-tight and still leak, or hose-proof and still fill with fine dust through an unsealed gland plate.</p>
+
+  <table>
+    <thead><tr><th>Code</th><th>What it claims</th><th>How it is normally demonstrated</th></tr></thead>
+    <tbody>
+      <tr><td>IP5X</td><td>Dust protected — dust may enter, but not in a quantity that interferes with operation</td><td>Circulating talcum powder in a test chamber, typically 8 hours</td></tr>
+      <tr><td>IP6X</td><td>Dust tight — no dust entry</td><td>Same chamber, vacuum applied inside the enclosure so any leak pulls powder in</td></tr>
+      <tr><td>IPX4</td><td>Splashing water from any direction</td><td>Oscillating tube or spray head, about 10 minutes</td></tr>
+      <tr><td>IPX5</td><td>Water jets from any direction</td><td>6.3 mm nozzle, 12.5 L/min, 30 kPa, 3 minutes, 2.5–3 m distance</td></tr>
+      <tr><td>IPX6</td><td>Powerful water jets</td><td>12.5 mm nozzle, 100 L/min, 100 kPa, 3 minutes, 2.5–3 m distance</td></tr>
+      <tr><td>IPX7</td><td>Temporary immersion</td><td>1 m of water above the lowest point, 30 minutes</td></tr>
+      <tr><td>IPX8</td><td>Continuous immersion</td><td>Depth and duration agreed between buyer and supplier — the code alone states nothing</td></tr>
+      <tr><td>IPX9K</td><td>High-pressure, high-temperature jet</td><td>80–100 bar, 80 °C water, 14–16 L/min, held at four angles at 100–150 mm</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Flow rates, pressures and durations above are the commonly used parameters in IEC 60529 test setups. They are typical values for orientation, not a substitute for the standard text or for the test report your supplier should be able to send you.</p>
+
+  <p>The gap between IP65 and IP66 is therefore not a marketing step up. It is a factor of eight in water volume — 12.5 litres per minute against 100 — from a nozzle twice the diameter, at more than three times the pressure. An enclosure that passes IPX5 by a comfortable margin can fail IPX6 on the same gasket, because the failure mode changes from "water runs down the door" to "water is driven into the seal line".</p>
+
+  <h2>Why NEMA 4 and IP66 are not the same number</h2>
+  <p>NEMA 250 and IEC 60529 were written by different bodies for different purposes. NEMA includes corrosion resistance, gasket ageing and, for some types, an indoor/outdoor distinction. IP does not test corrosion at all. The comparison below is the one buyers usually need, and the right-hand column is where most purchase orders go wrong.</p>
+
+  <table>
+    <thead><tr><th>NEMA type</th><th>Intended environment</th><th>Closest IP, roughly</th><th>What the IP number still does not cover</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Indoor, general purpose, no dust or water requirement</td><td>IP20 or none</td><td>Anything at all — this is a finger-safe enclosure</td></tr>
+      <tr><td>3R</td><td>Outdoor, rain, sleet and snow</td><td>IP24 to IP34</td><td>Hosedown, dust, corrosion of the enclosure itself</td></tr>
+      <tr><td>4</td><td>Indoor or outdoor, watertight, hosedown</td><td>IP66</td><td>Corrosion resistance, gasket ageing, UV</td></tr>
+      <tr><td>4X</td><td>As 4, plus corrosion resistance</td><td>IP66 plus a corrosion requirement</td><td>Salt spray duration is not fixed by the type — ask for the hours</td></tr>
+      <tr><td>12</td><td>Indoor, dust-tight, dripping liquids</td><td>IP54 to IP65</td><td>Any outdoor exposure, direct jets</td></tr>
+      <tr><td>13</td><td>Indoor, oil-tight</td><td>No IP equivalent</td><td>Oil resistance is not an IP test; nothing in IP covers it</td></tr>
+    </tbody>
+  </table>
+  <p>For a control panel assembled to UL 508A, the enclosure type and the panel rating interact: a Type 4 enclosure with unrated field wiring brought in through a standard knockout is no longer a Type 4 panel. That is the point most often missed when a buyer compares a Chinese quotation against a European one — the cheaper unit is frequently rated as an empty box, not as the assembly being shipped.</p>
+
+  <h2>Where the rating is lost after it leaves the factory</h2>
+  <p>A type test is run on one sample, in a laboratory, with the enclosure closed. Five things change between that sample and the unit on site.</p>
+  <ul>
+    <li><strong>Gasket compression.</strong> A poured or foamed gasket needs roughly 25–40% compression to seal. A door that is slightly twisted, or hinges fitted without a jig, will meet that figure at three corners and miss it at the fourth. Ask for a flatness check on the door, not just a gasket datasheet.</li>
+    <li><strong>Cable entries.</strong> The gland is part of the enclosure. An IP66 box with an IP54 gland and a plain hole is an IP54 assembly. If the buyer supplies their own glands, say so on the drawing and state which rating the cutouts must preserve.</li>
+    <li><strong>Cutouts and windows.</strong> Every laser-cut opening, inspection window and display bezel is a new seal line. A window bonded with a gasket that is compressed by screws at 150 mm pitch will bow between fixings.</li>
+    <li><strong>Powder coating on sealing faces.</strong> A 60–80 μm film on the flange where the gasket sits is a soft, compressible layer that relaxes over time. Masking the seal face, or specifying a thinner film there, is a cheap way to keep the compression predictable.</li>
+    <li><strong>Condensation.</strong> A sealed enclosure with a temperature swing will collect water inside even with no leak at all. That is a pressure-equalisation problem, not a gasket problem, and the usual answer is a breathable vent that passes air and vapour but not liquid water.</li>
+  </ul>
+
+  <div class="warn"><strong>Where the money goes:</strong> moving a standard wall-mounted box from IP55 to IP66 usually costs a gasket change and a retest. Moving it to IP69K changes the door design, the hinge, the seal material and the surface finish, and the price step is much larger than the code suggests. If the washdown is only occasional, an IP66 box under a drip shield is often the cheaper engineering answer — and it is a decision worth writing down rather than leaving to the supplier.</div>
+
+  <h2>What to put in the RFQ</h2>
+  <ul>
+    <li><strong>The rating, the standard and the assembly level.</strong> "IP66 to IEC 60529, tested as a complete assembly including glands" is a specification. "IP66" alone is a wish.</li>
+    <li><strong>Who tests and who pays.</strong> Type test at a third-party laboratory, or an in-house report? The difference is visible in the price and in the delivery date.</li>
+    <li><strong>The corrosion requirement, separately.</strong> Salt spray hours and the standard used, because IP does not measure corrosion and NEMA 4X does not fix the hours.</li>
+    <li><strong>Gland and cutout responsibility.</strong> Who supplies the glands, at what rating, and who is accountable if the assembled unit fails.</li>
+    <li><strong>What happens on a failed batch.</strong> Re-gasket, re-test or replace, and who pays the freight. Agreeing this before the first container is cheaper than negotiating it after one.</li>
+  </ul>
+
+  <h2>The question behind the question</h2>
+  <p>Buyers search for the difference between IP65 and IP66 because they have been quoted both for the same project and cannot see what changed. The useful answer is not a definition. It is a list: the nozzle and the flow rate, the gland rating, the seal face finish, the test report, and whether the rating applies to the empty box or to the assembly. Once those five are on the drawing, the two quotations become comparable — and the conversation stops being about the code and starts being about the installation.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="bend-guide.html">Next: bend radius, K-factor and what to write on a formed part →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">IP codes, test parameters and NEMA comparisons on this page follow common industry practice for IEC 60529 and NEMA 250. Ratings must be confirmed against the standard text, the applicable test report and the end customer's requirement before being written into a purchase order or a drawing.</div>
+</div></footer>
+</body>
+</html>
