@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Read an O-Ring Dash Number (AS568) Without Guessing the Size</title>
+<meta name="description" content="What the three digits in an AS568 dash number actually mean, the cross-section each series uses, a working dimension table for the -0xx and -1xx sizes, why a metric 1.78 mm ring is not automatically a -0xx replacement, and what to measure when the old ring is worn flat.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/as568-dash-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Read an O-Ring Dash Number (AS568) Without Guessing the Size">
+<meta property="og:description" content="The three digits decoded, the cross-section behind each series, a working -0xx and -1xx table, and the metric substitution mistake that quietly changes gland fill.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/as568-dash-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购和维修工程师搜「o-ring dash number chart」「how to read o-ring size」时真正想找的答案。
+  尺寸按 SAE AS568 的公开尺寸表整理，标注为常用规格；正式下单前请以现行版标准和图纸为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="oring-guide.html">Seals</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sealing components</div>
+  <h1>A dash number is a size code,<br>not a part number.</h1>
+  <p class="lede">"−010" tells you the cross-section and the inside diameter in one short string. It says nothing about the material, the hardness, the tolerance class or who made it. Most wrong orders start when those five facts get compressed into the dash number alone.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>What the three digits are doing</h2>
+  <p>Under SAE AS568 an O-ring is written as a dash followed by three digits. The first digit selects the cross-section series, which is a fixed nominal cord thickness. The last two digits pick a position along that series' inside-diameter ladder. That is the whole code. It is a lookup key, not a description.</p>
+
+  <table>
+    <thead><tr><th>First digit</th><th>Series</th><th>Nominal cross-section</th><th>In millimetres</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>−0xx</td><td>0.070 in (1/16 in)</td><td>1.78 mm</td></tr>
+      <tr><td>1</td><td>−1xx</td><td>0.103 in (3/32 in)</td><td>2.62 mm</td></tr>
+      <tr><td>2</td><td>−2xx</td><td>0.139 in (1/8 in)</td><td>3.53 mm</td></tr>
+      <tr><td>3</td><td>−3xx</td><td>0.210 in (3/16 in)</td><td>5.33 mm</td></tr>
+      <tr><td>4</td><td>−4xx</td><td>0.275 in (1/4 in)</td><td>6.99 mm</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Cross-sections above are the nominal values used across the AS568 series. ISO 3601 uses the same metric figures and does not use dash numbers at all — its sizes are written as inside diameter × cross-section in millimetres.</p>
+
+  <h2>The −0xx ladder, in the sizes that actually get ordered</h2>
+  <p>The 1/16 inch series is the workhorse of small hydraulic and pneumatic fittings, sensor housings and filter bowls. Inside diameters step by 1/16 inch from size to size, which is why the numbers look irregular in metric.</p>
+
+  <table>
+    <thead><tr><th>Dash</th><th>Inside diameter (in)</th><th>Inside diameter (mm)</th><th>Cross-section (mm)</th></tr></thead>
+    <tbody>
+      <tr><td>−010</td><td>0.239</td><td>6.07</td><td>1.78</td></tr>
+      <tr><td>−011</td><td>0.301</td><td>7.65</td><td>1.78</td></tr>
+      <tr><td>−012</td><td>0.364</td><td>9.25</td><td>1.78</td></tr>
+      <tr><td>−013</td><td>0.426</td><td>10.82</td><td>1.78</td></tr>
+      <tr><td>−014</td><td>0.489</td><td>12.42</td><td>1.78</td></tr>
+      <tr><td>−015</td><td>0.551</td><td>14.00</td><td>1.78</td></tr>
+      <tr><td>−016</td><td>0.614</td><td>15.60</td><td>1.78</td></tr>
+      <tr><td>−017</td><td>0.676</td><td>17.17</td><td>1.78</td></tr>
+      <tr><td>−018</td><td>0.739</td><td>18.77</td><td>1.78</td></tr>
+      <tr><td>−019</td><td>0.801</td><td>20.35</td><td>1.78</td></tr>
+      <tr><td>−020</td><td>0.864</td><td>21.95</td><td>1.78</td></tr>
+      <tr><td>−021</td><td>0.926</td><td>23.52</td><td>1.78</td></tr>
+      <tr><td>−022</td><td>0.989</td><td>25.12</td><td>1.78</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The −1xx ladder, for slightly heavier sections</h2>
+  <p>Same logic, 3/32 inch cord. A −110 and a −010 look interchangeable on a parts list and are not: the cord is 46 per cent thicker, which changes groove fill, compression and the force needed to seat the ring.</p>
+
+  <table>
+    <thead><tr><th>Dash</th><th>Inside diameter (in)</th><th>Inside diameter (mm)</th><th>Cross-section (mm)</th></tr></thead>
+    <tbody>
+      <tr><td>−110</td><td>0.362</td><td>9.19</td><td>2.62</td></tr>
+      <tr><td>−111</td><td>0.424</td><td>10.77</td><td>2.62</td></tr>
+      <tr><td>−112</td><td>0.487</td><td>12.37</td><td>2.62</td></tr>
+      <tr><td>−113</td><td>0.549</td><td>13.94</td><td>2.62</td></tr>
+      <tr><td>−114</td><td>0.612</td><td>15.54</td><td>2.62</td></tr>
+      <tr><td>−115</td><td>0.674</td><td>17.12</td><td>2.62</td></tr>
+      <tr><td>−116</td><td>0.737</td><td>18.72</td><td>2.62</td></tr>
+      <tr><td>−117</td><td>0.799</td><td>20.29</td><td>2.62</td></tr>
+      <tr><td>−118</td><td>0.862</td><td>21.89</td><td>2.62</td></tr>
+      <tr><td>−119</td><td>0.924</td><td>23.47</td><td>2.62</td></tr>
+      <tr><td>−120</td><td>0.987</td><td>25.07</td><td>2.62</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Dimensions above are the nominal inside diameters published in AS568 size tables, converted at 25.4 mm per inch and rounded to two decimals. Treat them as order-of-magnitude confirmation, then confirm the exact figure against the current standard revision or the supplier's drawing before tooling or a production order.</p>
+
+  <h2>The metric substitution that quietly fails</h2>
+  <p>A 1.78 mm metric ring and a −0xx imperial ring are dimensionally the same cord, and that is exactly where the trap sits. The two systems publish different tolerance bands: AS568 splits sizes into commercial and precision classes, ISO 3601 defines its own classes, and the acceptable inside-diameter spread on a small ring can differ by a few tenths of a millimetre between them.</p>
+  <p>On a static face seal with plenty of squeeze, a few tenths do not matter. On a dynamic rod seal, or a gland designed to a fixed fill percentage, they do — the ring either drags or leaks, and the buyer blames the material when the problem was the tolerance class. If a drawing calls for a −014, supply a −014 and say which class. If the customer wants metric, quote the metric size with its ISO class and let them approve the change.</p>
+
+  <div class="warn"><strong>Do not measure a used ring to reorder.</strong> A ring that has been in service for a year is permanently deformed, swollen by the fluid and often worn flat on the sealing face. Its inside diameter reads large and its cord reads thin. Measure the groove instead — groove width, groove depth and the shaft or bore diameter — and derive the size from the gland. The used ring is evidence of what failed, not a specification.</div>
+
+  <h2>Reading a size off a groove, in order</h2>
+  <ul>
+    <li><strong>Measure the groove depth and width.</strong> Depth sets the squeeze; width sets the fill. Both are machined dimensions and do not drift with service.</li>
+    <li><strong>Measure the bore or shaft.</strong> Inside diameter of the ring equals bore diameter on a piston seal, or shaft diameter on a rod seal, before stretch is applied.</li>
+    <li><strong>Pick the series from the depth.</strong> A groove about 1.4 mm deep belongs to a 1.78 mm cord; about 2.2 mm belongs to a 2.62 mm cord. Nominal squeeze on a static face seal usually lands in the 15–25 per cent range.</li>
+    <li><strong>Match the inside diameter to the ladder.</strong> Choose the dash whose nominal ID sits closest to the gland diameter, then confirm the resulting stretch is acceptable — 1 to 5 per cent is the usual working band for most static applications.</li>
+    <li><strong>Write the full callout.</strong> Dash number, material, hardness and standard, for example: −014, NBR 70 Shore A, AS568 precision class.</li>
+  </ul>
+
+  <h2>What the dash number does not tell you</h2>
+  <p>Four things get left out of almost every RFQ that starts from a dash number, and each one changes the price or the failure mode. The compound decides temperature and fluid compatibility. The hardness decides how the ring behaves under pressure and whether it extrudes. The tolerance class decides how much the delivered ring may vary. The standard — AS568, ISO 3601, or a customer drawing — decides which of the above applies.</p>
+  <p>When a buyer sends only "−012, 500 pcs", the useful reply is not a price. It is the four questions, asked once, followed by a price that will not need to be revised after the sample arrives.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="oring-guide.html">Related: how NBR, silicone and FKM are chosen by application →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Dash numbers, series cross-sections and inside diameters on this page follow the published AS568 dimension tables as commonly used in the trade. Sizes, tolerance classes and material requirements must be confirmed against the current standard revision and the customer's drawing before being written into a purchase order.</div>
+</div></footer>
+</body>
+</html>
