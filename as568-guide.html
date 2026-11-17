@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AS568 Dash Numbers Explained: How to Read an O-Ring Size Like "-214"</title>
+<meta name="description" content="What an AS568 dash number means, how the size series are built, why -214 is the most common O-ring in the world, how to cross to metric ISO 3601 sizes, and what to check on a quote sheet when a supplier just says -214 NBR70.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/as568-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AS568 Dash Numbers Explained: How to Read an O-Ring Size Like -214">
+<meta property="og:description" content="How the AS568 dash-number system works, the five size series, groove design basics, ISO 3601 cross-referencing, and what to verify before ordering.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/as568-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外买家和维修工程师搜「AS568 dash number chart」「what does -214 o-ring mean」时真正想找的答案。
+  尺寸值为 AS568 公称值，槽径与压缩量按行业通行典型值标注，正式设计请以标准原文和供应商沟槽手册为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="oring-guide.html">Seals</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sealing components</div>
+  <h1>A dash number is not<br>a part number. It is two numbers.</h1>
+  <p class="lede">Every day, maintenance engineers and buyers type "AS568 -214" or "dash number chart" into a search box, and most results either dump a 475-row table or explain nothing. This page is the missing middle: what a dash number actually encodes, how the series are built, and what to check on a quotation before you commit a groove to it.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>What the dash number encodes</h2>
+  <p>AS568 (the American standard for aerospace-size O-rings) lists a fixed set of inside-diameter and cross-section combinations. Each row got a sequential number, written with a dash: -004, -110, -214, -334. The dash number itself carries no arithmetic meaning — it is a row index. But the <strong>series</strong> the number falls into tells you the cross-section, and that is what experienced buyers actually read from it:</p>
+  <table>
+    <thead><tr><th>Series</th><th>Nominal cross-section (CS)</th><th>Typical use</th></tr></thead>
+    <tbody>
+      <tr><td>-001 to -029</td><td>0.042 in and 0.070 in</td><td>Small hydraulics, fittings, instrumentation</td></tr>
+      <tr><td>-100 to -178</td><td>0.103 in</td><td>General hydraulics and pneumatics</td></tr>
+      <tr><td>-200 to -284</td><td>0.139 in</td><td>The workhorse series — most industrial glands are designed here</td></tr>
+      <tr><td>-300 to -396</td><td>0.210 in</td><td>Large static flanges, low-pressure vessels</td></tr>
+      <tr><td>-400 to -475</td><td>0.275 in</td><td>Big static seals, tank and manifold covers</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">Series boundaries and cross-sections are the nominal AS568 values; always confirm the exact row in a current size table (supplier catalogues such as Parker's O-ring handbook reproduce them with tolerances).</p>
+
+  <h2>Why -214 is the size everyone quotes</h2>
+  <p>Within the -200 series, -214 (nominal ID 1.078 in, CS 0.139 in) has become the default size for general industrial glands — many test rigs, standard cylinders and pump housings are designed around it, which is why it is also the size every sample pack leads with. A supplier who can hold tolerance on -214 in NBR 70 can usually hold the rest of the series; a supplier whose -214 datum sheet looks vague is telling you something about the rest of the table.</p>
+
+  <h2>What a groove actually does to the ring</h2>
+  <p>The dash number defines the ring, but the gland defines the seal. Two figures on any supplier's groove page decide whether an O-ring survives the year:</p>
+  <ul>
+    <li><strong>Squeeze.</strong> The gland compresses the ring so it deforms rather than leaks. Typical design practice: roughly 10–20% squeeze on dynamic (reciprocating or rotary) duties and 15–30% on static duties, varying with cross-section and hardness. Too little weeps; too much kills the ring by heat and set.</li>
+    <li><strong>Gland fill.</strong> The ring's cross-sectional area must leave room for thermal expansion and squeeze volume — common practice keeps fill at or below about 85%. Overfilled glands are the quiet cause of seals that "fail for no reason" on Monday mornings after a hot weekend.</li>
+  </ul>
+  <p class="muted">Squeeze and fill ranges are typical industry practice; final gland dimensions should come from the seal supplier's groove design tables (Parker ORK, Trelleborg and similar handbooks) matched to the compound and duty.</p>
+
+  <h2>Crossing to metric: ISO 3601</h2>
+  <p>European drawings often specify ISO 3601 class A or B rings instead of AS568 dash numbers. The two systems overlap heavily but are not identical — a nominal "metric equivalent" of -214 exists within ISO 3601's table, but tolerances and class rules differ. When a customer mixes references on one drawing (AS568 dash on the BOM, ISO 3601 class in the note), quote against one system and state the other as reference — this single habit prevents a large share of "wrong size" claims, because the discrepancy is caught at quotation rather than at assembly.</p>
+
+  <h2>What to check before ordering, in three lines</h2>
+  <ol>
+    <li><strong>Compound, not just size.</strong> "-214" without a hardness and compound code (NBR 70, FKM 75, EPDM 70) is half a part number. Insist the quote prints all three.</li>
+    <li><strong>Cure date and shelf life.</strong> Elastomers age in storage. NBR stored cool and dark is commonly given a shelf life in the multi-year range per industry guidance, but the bag should carry a cure date so FIFO rotation is possible. No cure date printed = no traceability.</li>
+    <li><strong>The groove, not the ring.</strong> If you have inherited a machine and no drawing, measure the gland — rod or bore diameter, groove width, groove depth — and let the supplier work back to the dash number. Sizing from the old, partly-set ring you dug out of the groove is how the wrong size gets specified forever.</li>
+  </ol>
+
+  <h2>A note for distributors and MRO buyers</h2>
+  <p>If you buy standard dash sizes for stock, the quality difference between suppliers shows up in exactly the paperwork, not the rubber: cure dates on bags, lot traceability, hardness certificates, and willingness to quote from your groove measurements. That paperwork is what separates a factory-direct supply from a trader repacking someone else's bulk bags — and it is checkable on the first sample order, before any volume commitment.</p>
+
+  <div class="cta-box">
+    <p>Buying standard AS568 sizes from Asia? We are a small seals producer in Taizhou, China (Jiachen Rubber &amp; Plastic), selling factory-direct with cure dates and lot numbers printed on every bag. See <a href="oring-guide.html">our material selection guide</a>, or email 2277214902@qq.com for a sample pack.</p>
+  </div>
+
+</main>
+
+<footer><div class="wrap">
+  <p>MachineSourcing — plain technical guides for buyers of Chinese manufactured parts. <a href="index.html">All guides</a></p>
+</div></footer>
+</body>
+</html>
