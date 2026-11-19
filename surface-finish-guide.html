@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ra 1.6 or Rz 6.3: What a Surface Finish Symbol Actually Asks For</title>
+<meta name="description" content="How Ra and Rz relate, why the same drawing note costs different money on a lathe and a mill, which process reaches which roughness band, and the three places where specifying a finer finish buys nothing.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/surface-finish-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ra 1.6 or Rz 6.3: What a Surface Finish Symbol Actually Asks For">
+<meta property="og:description" content="Ra and Rz explained on one part, the process bands that reach each value, and where a tighter finish note adds cost without adding function.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/surface-finish-guide.html">
+</head>
+<body>
+<div style="background:#131a22;color:#e8edf2;font:14px/1.6 -apple-system,'Microsoft YaHei',sans-serif;padding:12px 24px;text-align:center">
+  中文说明（给厂里看的，正式上线时这一条会删掉）：这是英文原创样稿，写的是海外采购和工艺工程师搜「ra vs rz」「surface finish chart」时真正想找的答案。
+  数值为 ISO 4287/4288 口径下的常用区间，正式下单前请以图纸和现行版标准为准。
+</div>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="oring-guide.html">Seals</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Machining</div>
+  <h1>A finish symbol is a<br>measurement method,<br>not a description.</h1>
+  <p class="lede">"Ra 1.6" on a drawing is not a statement about how a part looks or feels. It is one statistical parameter taken along one or more traced lines, and it can be met by a surface that still leaks, still wears, or still fails a seal. Knowing what the number measures is how you stop paying for finish you do not need.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>Ra and Rz are not two names for one thing</h2>
+  <p>Ra is the arithmetic mean of the profile height deviations from the mean line, over the evaluation length. Rz is the average of the maximum peak-to-valley heights within each sampling length. One averages everything; the other is driven by the tallest features.</p>
+  <p>That difference is why two surfaces can share an Ra value and behave differently. A turned surface and a ground surface at the same Ra have different peak shapes: turning leaves a periodic thread-like profile, grinding leaves a finer, denser one. Under a lip seal, the turned one can pump oil along its lay; the ground one cannot.</p>
+
+  <table>
+    <thead><tr><th>Ra (µm)</th><th>Typical Rz range (µm)</th><th>What it usually indicates</th></tr></thead>
+    <tbody>
+      <tr><td>0.4</td><td>1.6 – 2.5</td><td>Fine grinding, honing, lapping</td></tr>
+      <tr><td>0.8</td><td>3.2 – 5.0</td><td>Grinding, fine boring</td></tr>
+      <tr><td>1.6</td><td>6.3 – 10</td><td>Fine turning, precision milling</td></tr>
+      <tr><td>3.2</td><td>12.5 – 20</td><td>General turning and milling</td></tr>
+      <tr><td>6.3</td><td>25 – 40</td><td>Rough turning, drilling</td></tr>
+      <tr><td>12.5</td><td>50 – 80</td><td>Sawn, rough cast surface</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">The Rz band is a working relationship, not a conversion formula. The ratio between the two parameters changes with the process and with the cut conditions, which is exactly why a drawing should state which one it means rather than leaving the reader to assume.</p>
+
+  <h2>Which process reaches which band</h2>
+  <p>The practical question on a quotation is not "can you hit Ra 0.8" but "which operation gets there, and does the part have to be set up twice". This is the table a process planner actually uses.</p>
+
+  <table>
+    <thead><tr><th>Process</th><th>Normal working band (Ra)</th><th>Cost note</th></tr></thead>
+    <tbody>
+      <tr><td>CNC milling, standard</td><td>1.6 – 3.2 µm</td><td>Baseline; no extra operation</td></tr>
+      <tr><td>CNC turning, standard</td><td>1.6 – 3.2 µm</td><td>Baseline; finish improves with nose radius and feed</td></tr>
+      <tr><td>Fine boring</td><td>0.8 – 1.6 µm</td><td>Extra pass, same setup</td></tr>
+      <tr><td>Surface grinding</td><td>0.4 – 0.8 µm</td><td>Separate operation after heat treatment</td></tr>
+      <tr><td>Honing</td><td>0.2 – 0.4 µm</td><td>Bore-specific; needs its own fixture</td></tr>
+      <tr><td>Lapping</td><td>0.05 – 0.2 µm</td><td>Slow, hand-fed, priced per face</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Three places a finer note buys nothing</h2>
+  <p><strong>1. Non-functional faces.</strong> A clearance face that touches nothing but air does not need Ra 0.8. If the note sits on a general tolerance block instead of on specific faces, every surface on the part inherits it, and every surface gets inspected against it.</p>
+  <p><strong>2. Surfaces that get coated afterwards.</strong> Anodising, powder coating and plating follow the substrate profile, but they also add their own. Specifying Ra 0.4 before a 60 µm powder coat is spending money on a surface that will be buried.</p>
+  <p><strong>3. Sealing faces specified by amplitude alone.</strong> A radial lip seal needs the right Ra and the right lay direction. A plunging grind that meets Ra 0.4 but leaves a helical lead will still leak. The drawing should carry the lay symbol, not only the number.</p>
+
+  <h2>How to write it so the quote is comparable</h2>
+  <p>Put the symbol on the faces that function, leave the rest at the general block, and state the parameter. "Ra 1.6, traced across the lay" is a specification. A bare "smooth" is not, and a supplier quoting against it will guess — usually in the direction that costs you the seal.</p>
+
+  <p class="muted">If you are sourcing machined parts from China and want the three pages your buyers search written for your own site, the offer on the <a href="index.html#offer">home page</a> still stands: three pages, no charge, no contract.</p>
+
+</main>
+
+<footer><div class="wrap">
+  <p>MachineSourcing — English technical pages for Chinese manufacturers. Written by a working writer, not a content farm.</p>
+</div></footer>
+</body>
+</html>
