@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reading a TC Oil Seal Part Number: Shaft, Bore, Width and What the Letters Hide</title>
+<meta name="description" content="How to specify a TC (double-lip, garter-spring) oil seal correctly: shaft tolerance and finish, bore tolerance, housing guidance, lip materials NBR/FKM/EPDM, pressure and speed limits, and the failure modes behind the most common returns.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/oil-seal-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reading a TC Oil Seal Part Number">
+<meta property="og:description" content="Shaft finish, bore tolerance, lip material and pressure limits — what a TC oil seal specification must say to survive a purchase order.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/oil-seal-guide.html">
+</head>
+<body>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="ip-rating-guide.html">Enclosures</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sealing components</div>
+  <h1>A TC oil seal is three numbers<br>and four decisions.</h1>
+  <p class="lede">Buyers write "TC oil seal 35×52×7" and think the specification is done. It is not. The three numbers get the part delivered; the four unwritten decisions — shaft finish, bore tolerance, lip material, pressure class — decide whether it survives the first month. Most seal returns trace back to one of the four, not to the rubber.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>What the letters actually mean</h2>
+  <p>The case style letters describe the lip package, and the differences are not cosmetic. <strong>TC</strong> is a double-lip design with a garter spring: the main lip seals oil, the secondary lip keeps dust out. <strong>SC</strong> is single-lip with a spring — fine for clean, oil-only service. <strong>TB</strong> is double-lip without spring; <strong>SA</strong> single-lip without. A repair shop in a dusty region ordering SC to save five cents per piece will see the seal fail long before the rubber wears out, and nobody will connect the failure to the missing dust lip.</p>
+  <p>One caution when comparing quotations: not every market uses the letter codes identically. Some suppliers label a reinforced double-lip seal TC and another calls the same construction BA or TCV. The reliable comparison is the cross-section drawing, not the code.</p>
+
+  <h2>Shaft: the surface the seal actually rides on</h2>
+  <p>The lip runs on the shaft surface, so the shaft specification matters more than the seal's own datasheet. Three requirements do the work:</p>
+  <ul>
+    <li><strong>Hardness and finish</strong> — typically 30–45 HRC with a ground finish around Ra 0.2–0.5 µm for NBR lips; FKM and high-speed duty sit at the finer end. A machined-but-not-ground shaft can cut seal life by an order of magnitude, and the failure will be blamed on the seal.</li>
+    <li><strong>Lead angle</strong> — plunge-ground shafts without lead removal pump the lip axially and weep. If a rebuilt shaft weeps within days, this is the first suspect.</li>
+    <li><strong>Chamfer</strong> — a 15–25° lead-in chamfer protects the lip during assembly. Assembly nicks are invisible at installation and fatal in service.</li>
+  </ul>
+
+  <h2>Bore and housing</h2>
+  <p>The seal is fixed by its rubber-covered OD (for TC with metal case, by the case). Bore tolerance is typically H8 for the common sizes; the housing face must not deform the case when the seal is pressed in. An oversized bore lets the seal spin and wears the housing; an undersized one buckles the case and distorts the lip geometry before the first revolution. Neither shows up at goods-in inspection — both show up in the field.</p>
+
+  <h2>Material by application, not by catalogue order</h2>
+  <ul>
+    <li><strong>NBR</strong> — the default for mineral oils, hydraulic fluid, water-glycol at moderate temperature (roughly −40 to +100 °C continuous, short peaks higher). Cheap, tough, and swells in ozone and polar fluids.</li>
+    <li><strong>FKM</strong> — hot oil, fuels, some additives, higher continuous temperatures (up to ~150–200 °C). Costs multiples of NBR; specifying it where NBR survives is money spent for nothing, and vice versa is a seized gearbox.</li>
+    <li><strong>EPDM</strong> — brake fluid, steam, hot water, polar media. Fatally wrong in petroleum oil — a single letter difference that destroys the seal in hours.</li>
+  </ul>
+
+  <h2>Pressure and speed: where the garter spring gives up</h2>
+  <p>A standard TC seal is a low-pressure part. Unpressurised or slight splash service is its home; sustained pressure above roughly 0.5 bar needs a pressure-resistant design (supported lip, or a dedicated pressure seal), otherwise the lip is forced against the shaft and burns. Peripheral speed matters the same way: standard NBR TC seals are comfortable to a few m/s; beyond that, the flash temperature at the lip decides. Ask for the PN and m/s rating explicitly in the RFQ — "standard TC" is not an answer.</p>
+
+  <h2>What to put in the RFQ</h2>
+  <ol>
+    <li><strong>Dimensions with tolerance intent</strong> — shaft Ø, bore Ø, width, and which standard governs (ISO 6194-1, DIN 3760, or supplier standard).</li>
+    <li><strong>Case style and material</strong> — TC/SC/TB/SA per the supplier's drawing, NBR/FKM/EPDM with hardness.</li>
+    <li><strong>Service data</strong> — fluid, temperature range, shaft speed, pressure, and whether dust or water splash is present.</li>
+    <li><strong>Quantity split</strong> — seals are volume items; splitting a year's usage into two releases often moves the price more than any negotiation.</li>
+    <li><strong>Batch inspection report</strong> — dimensions and hardness per batch, so a field failure can be traced to a production lot instead of an argument.</li>
+  </ol>
+
+  <h2>The question behind the question</h2>
+  <p>Buyers hunt for "TC oil seal price" because the same size comes back at prices differing threefold, and the cheapest is rarely wrong rubber — it is correct rubber with thinner case metal, a coarser lip finish, or no batch traceability. Those differences are invisible in the part number and obvious in year two. A supplier who volunteers the pressure rating, the lip material batch data and the standard behind the drawing has already answered most of the questions a field failure would ask later.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="oring-guide.html">Next: NBR vs silicone vs FKM O-rings →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Hardness, finish, temperature, pressure and speed values on this page are typical industry ranges for standard seal designs, offered for orientation. Final selection must be confirmed against ISO 6194-1 / DIN 3760 documentation and the compound datasheet for the actual application.</div>
+</div></footer>
+</body>
+</html>
