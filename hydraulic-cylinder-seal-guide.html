@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Specifying Hydraulic Cylinder Seals: U-Cups, Backup Rings, Wipers and Why Kits Leak Early</title>
+<meta name="description" content="How to specify a hydraulic cylinder seal set that survives: U-cup geometry and material, pressure and extrusion gaps, buffer rings, wiper selection, rod and bore surface limits, and the ordering details most RFQs leave out.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://tom6324.github.io/machinesourcing/hydraulic-cylinder-seal-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Specifying Hydraulic Cylinder Seals">
+<meta property="og:description" content="U-cups, backup rings, wipers and surface limits — what a cylinder seal RFQ must say beyond the rod and bore diameters.">
+<meta property="og:url" content="https://tom6324.github.io/machinesourcing/hydraulic-cylinder-seal-guide.html">
+</head>
+<body>
+
+<header><div class="wide nav">
+  <a class="brand" href="index.html">Machine<em>Sourcing</em></a>
+  <a class="lnk" href="casting-guide.html">Casting</a>
+  <a class="lnk" href="cnc-guide.html">Machining</a>
+  <a class="lnk" href="bend-guide.html">Sheet metal</a>
+  <a class="lnk" href="oil-seal-guide.html">Oil seals</a>
+  <a class="lnk sp" href="index.html#offer">Free first three pages</a>
+  <a class="cta" href="index.html#contact">Contact</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Guide · Sealing components</div>
+  <h1>A cylinder seal kit is four parts<br>and one gap number.</h1>
+  <p class="lede">Most cylinder seal RFQs name the rod and bore diameters and stop there. The kit then arrives, works for a few weeks, and starts weeping. In the majority of early failures the rubber is not the culprit — the pressure class, the extrusion gap, the missing buffer ring or a rod surface left too rough is. This page walks through the four seal positions in a typical hydraulic cylinder and the specification details that decide whether the set survives.</p>
+</div></section>
+
+<main class="wrap">
+
+  <h2>The four positions and what each one actually does</h2>
+  <p>A double-acting cylinder runs four seal positions, and each fails differently:</p>
+  <ul>
+    <li><strong>Piston seal</strong> — pressure-holding across the piston. The default choice is a U-cup (U-cups paired back-to-back for double acting) or a compact profile with symmetric lips. At higher pressure, a hard plastic backup ring on the low-pressure side keeps the elastomer from extruding into the clearance gap.</li>
+    <li><strong>Rod seal</strong> — the leak-critical position. It sees the full system pressure on every stroke and must also return oil film to the reservoir. A U-cup or a profile with a pressure-relief groove is standard; a seal that holds too well can trap pressure between rod and wiper and drag the rod back.</li>
+    <li><strong>Wiper (scraper)</strong> — keeps dirt out. On mobile equipment and any machine working outdoors, the wiper decides the life of the rod seal; a hardened contaminant past the wiper scores the rod and the rod seal follows.</li>
+    <li><strong>Buffer (anti-extrusion) ring</strong> — absorbs pressure spikes ahead of the rod seal on aggressive duty. Kits sold without it are fine on a smooth test bench and short-lived on a press or a loader.</li>
+  </ul>
+  <p>O-rings for the gland and port faces round the set out; specify NBR 70–90 Shore A for mineral oil service unless the temperature says otherwise.</p>
+
+  <h2>The extrusion gap: the number most RFQs forget</h2>
+  <p>Every reciprocating elastomer seal fails by the same mechanism when pushed hard enough: pressure forces a lip edge into the clearance gap between seal, rod and bearing, and nibbling starts. The gap is the difference between rod diameter and the bore of the wear bearing, divided by two — and its allowable value drops sharply as pressure rises. Practical ordering consequences:</p>
+  <ul>
+    <li>State the <strong>working pressure and peak pressure</strong> in the RFQ. A U-cup fine at 160 bar nibbles at 300 bar unless a backup ring is added.</li>
+    <li>State the <strong>bearing type and its wear limit</strong>. A worn bearing doubles the gap silently; kits replaced without checking the bearing die at half life.</li>
+    <li>For anything above roughly 250 bar, expect the answer to include anti-extrusion rings — if the quotation is plain U-cups only, ask why.</li>
+  </ul>
+
+  <h2>Material: NBR covers most of the volume</h2>
+  <p>For mineral hydraulic oil between roughly −20 and +100 °C, NBR (70–90 Shore A) is the volume material: tough, cheap, and stable in the fluid. PU (polyurethane) takes higher pressure and abrasion on rod seals and wipers at similar temperatures. FKM enters where temperatures run high or fluids are aggressive — at a multiple of the price, and with worse low-temperature behaviour. Two ordering traps:</p>
+  <ul>
+    <li>EPDM must never meet petroleum oil — a wrong-material rod seal can fail within hours of first stroke.</li>
+    <li>"Hydraulic" fluids are not one thing: HLP mineral oil, HFC water-glycol and biodegradable HEES esters each point to a different compound. Name the fluid, not the category.</li>
+  </ul>
+
+  <h2>Rod and bore surfaces decide half the service life</h2>
+  <p>The seal runs on the steel, not on itself. Typical requirements: rod ground to Ra 0.2–0.5 µm with hardness from 30 HRC up (chromium plating on wear surfaces), bore honed or hard-chromed to Ra 0.4–0.8 µm, lead-free plunge grinding, and a 15–25° assembly chamfer so the lip is not nicked on installation. A rebuilt rod polished by hand instead of re-ground can cut seal life by an order of magnitude — and the claim will land on the seal supplier.</p>
+
+  <h2>What to put in the RFQ</h2>
+  <ol>
+    <li><strong>Geometry</strong> — bore Ø, rod Ø, gland and groove dimensions with the drawing if available; seal cross-section and height if re-using the old groove.</li>
+    <li><strong>Duty</strong> — working and peak pressure, stroke length and cycles per hour, fluid by specification, temperature range.</li>
+    <li><strong>Positions required</strong> — piston, rod, wiper, buffer, O-rings, as a matched set; mixed kits from different suppliers lose the gap-and-material match.</li>
+    <li><strong>Batch traceability</strong> — hardness and dimensions per batch, so a field failure traces to a lot instead of an argument.</li>
+    <li><strong>Quantity logic</strong> — service kits are volume items; a year's usage split across two releases usually beats one emergency buy at breakdown prices.</li>
+  </ol>
+
+  <h2>The question behind the question</h2>
+  <p>Buyers search "cylinder seal kit price" and receive offers that differ twofold for the same diameters. The difference hides in the details this page listed: rubber hardness actually held, backup rings included or not, wiper material matched to the duty, and whether anyone promised batch data. Those lines do not appear in the part number; they appear in month two. A supplier who answers the pressure, fluid and gap questions without being asked has already separated itself from the pack.</p>
+
+  <p style="margin-top:34px"><a class="cta ghost" href="oil-seal-guide.html">Next: reading a TC oil seal part number →</a></p>
+
+</main>
+
+<footer><div class="wrap">
+  <strong style="color:#fff">MachineSourcing</strong> — a demonstrator site.
+  <div class="fine">Pressure, temperature, hardness and surface-finish values on this page are typical industry ranges for standard cylinder seal designs, offered for orientation. Final selection must be confirmed against the seal supplier's datasheet and the machine's operating specification.</div>
+</div></footer>
+</body>
